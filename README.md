@@ -1,4 +1,7 @@
 # event_manager-code-snippet
+EventManager는 이벤트를 큐에 저장하고 순차적으로 처리하는 시스템입니다.
+이벤트는 CallFunc* 타입으로 관리되며, 함수 포인터를 이용해 다양한 이벤트를 처리할 수 있도록 설계되었습니다.
+
 ```cpp
 
 #include <deque>
