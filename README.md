@@ -19,6 +19,8 @@ private:
     std::unordered_set<CallFunc*> m_eventLookup; 
 };
 
+```
+```cpp
 
 void EventManager::PushEvent(CallFunc* pFunc)
 {
@@ -54,7 +56,7 @@ void EventManager::PopAllEvent()
     while (!m_eventQueue.empty())
     {
         auto pFunc = m_eventQueue.front();
-        pFunc->release(); // 메모리 해제
+        pFunc->release();
         m_eventLookup.erase(pFunc);
         m_eventQueue.pop_front();
     }
